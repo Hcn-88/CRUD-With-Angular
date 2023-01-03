@@ -1,0 +1,13 @@
+<app-formulario
+    (submit)="onSubmit($event)"
+    (edit)="onEdit($event)"
+    [showEdit]="currentEdit"
+    [showCadastrar]="currentCadastrar"
+    [produto]="produto"
+></app-formulario>
+
+<app-tabela
+    [produtos]="produtos"
+    (delete)="onDelete($event)"
+    (select)="onSelect($event)"
+></app-tabela>

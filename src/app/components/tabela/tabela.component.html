@@ -1,0 +1,22 @@
+<h3 class="text-center mb-4">Lista de Produtos</h3>
+<table class="table table-bordered table-striped text-center w-75 mx-auto">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Idade</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let produto of produtos; let indice = index">
+            <td>{{produto.nome}}</td>
+            <td>{{produto.email}}</td>
+            <td>{{produto.idade}}</td>
+            <td class="d-flex justify-content-evenly">
+                <button class="btn btn-primary" (click)="handleSelect(indice)">Selecionar</button>
+                <button class="btn btn-warning" (click)="handleDelete(indice)">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

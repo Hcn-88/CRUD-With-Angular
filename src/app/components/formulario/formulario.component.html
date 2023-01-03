@@ -1,0 +1,14 @@
+<div class="my-5">
+    <h3 class="text-center">Cadastrar Produtos</h3>
+    <form autocomplete="off" class="w-75 mx-auto" [formGroup]="formulario">
+        <input type="text" formControlName="id" hidden>
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" class="form-control mb-3 mt-2" formControlName="nome">
+        <label for="email">Email</label>
+        <input id="email" type="email" class="form-control mb-3 mt-2" formControlName="email">
+        <label for="idade">Idade</label>
+        <input id="idade" type="number" class="form-control mb-4 mt-2" formControlName="idade">
+        <input type="button" value="Cadastrar" class="btn btn-secondary w-100 mb-2" (click)="handleSubmit()" *ngIf="showCadastrar">
+        <input type="button" value="Editar" class="btn btn-secondary w-100" (click)="handleEdit()" *ngIf="showEdit">
+    </form>
+</div>
